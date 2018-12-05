@@ -6,10 +6,16 @@ using System.Threading.Tasks;
 
 namespace DeckOfCards
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
-        {
+
+        public static void Main(string[] args)
+        {           
+
+
+            Console.ReadLine();                     
+            
+
         }
     }
 }
