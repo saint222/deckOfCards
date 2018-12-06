@@ -10,9 +10,11 @@ namespace DeckOfCards
     {
 
         public static void Main(string[] args)
-        {           
+        {
 
-
+            Game game = new Game();
+            game.CreateCards();
+            //game.ReadTheList();
             Console.ReadLine();                     
             
 

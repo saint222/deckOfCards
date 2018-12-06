@@ -82,7 +82,7 @@ namespace DeckOfCards
                     suit = "♠";
                     break;
             }
-            Console.WriteLine($"Chosen rank is {suit}");
+            Console.WriteLine($"Chosen suit is {suit}");
             return suit;
 
         }
