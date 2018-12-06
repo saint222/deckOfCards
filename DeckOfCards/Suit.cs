@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace DeckOfCards
 {
-    class Suit
+    public enum Suit
     {
+        spades,
+        clubs,
+        diamonds,
+        hearts
 
     }
 

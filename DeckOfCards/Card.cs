@@ -58,6 +58,29 @@ namespace DeckOfCards
             return rank;
 
         }
+        public string SuitsOn(Suit st)
+        {
+            string suit = "";
+
+            switch (st)
+            {
+                case Suit.clubs:
+                    suit = "♣";
+                    break;
+                case Suit.diamonds:
+                    suit = "♦";
+                    break;
+                case Suit.hearts:
+                    suit = "♥";
+                    break;
+                case Suit.spades:
+                    suit = "♠";
+                    break;
+            }
+            Console.WriteLine($"Chosen rank is {suit}");
+            return suit;
+
+        }
 
     }
 }

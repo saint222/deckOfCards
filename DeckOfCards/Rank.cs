@@ -8,7 +8,7 @@ using System.IO;
 namespace DeckOfCards
 {
     public enum Rank
-        
+
     {
         two,
         three,
