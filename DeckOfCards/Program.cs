@@ -12,9 +12,10 @@ namespace DeckOfCards
         public static void Main(string[] args)
         {
 
-            Game game = new Game();
-            game.CreateCards();
-            //game.ReadTheList();
+            //Game game = new Game();
+            //game.CreateCards();
+            Card card = new Card();
+            card.ShowACard();
             Console.ReadLine();                     
             
 

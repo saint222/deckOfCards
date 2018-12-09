@@ -12,6 +12,13 @@ namespace DeckOfCards
         public Rank Rank { get; set; }
         public Suit Suit { get; set; }
 
+        //public Card(Rank rank, Suit suit)
+        //{
+        //    Rank = rank;
+        //    Suit = suit;
+            
+        //}
+
 
         public string RanksOn(Rank rnk)
         {
@@ -59,7 +66,7 @@ namespace DeckOfCards
                     rank = "A";
                     break;
             }
-            Console.WriteLine($"Chosen rank is {rank}");
+            //Console.WriteLine($"Chosen rank is {rank}");
             return rank;
 
         }
@@ -82,8 +89,17 @@ namespace DeckOfCards
                     suit = "♠";
                     break;
             }
-            Console.WriteLine($"Chosen suit is {suit}");
+            //Console.WriteLine($"Chosen suit is {suit}");
             return suit;
+
+        }
+        public void ShowACard()
+        {
+            Card card = new Card();            
+            Console.WriteLine("-----------");
+            Console.WriteLine($"|{card.SuitsOn(Suit.diamonds)}{card.RanksOn(Rank.Ace)}       |\n|         |\n|         |\n|         |\n|         |\n|         |");
+            Console.WriteLine("-----------");
+            
 
         }
 
