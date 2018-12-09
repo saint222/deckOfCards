@@ -9,7 +9,7 @@ namespace DeckOfCards
     public class Game
 
     {
-
+        
         public List<Card> CreateCards()
         {
             List<Card> cards = new List<Card>();
@@ -22,14 +22,28 @@ namespace DeckOfCards
 
                     cards.Add(card);
                 }
-                
-            }
 
+            }
+                        
             return cards;
+        }
+
+
+        public List<Card> MixTheCards (List<Card> cards)
+        {
+            var sortedCards = cards.OrderBy(u => u.Rank).ThenBy(u => u.Suit);
+          
+            foreach (var item in cards)
+            {
+                Console.WriteLine($"{item}");
+            }    
+            
+            return sortedCards.ToList();
         }
 
 
     }
 
 }
+
 
