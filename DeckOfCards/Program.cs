@@ -14,8 +14,9 @@ namespace DeckOfCards
 
             Game game = new Game();
             var cards = game.CreateCards();
-            game.MixTheCards(cards);
-            Console.ReadLine();                     
+            //game.MixTheCards(cards);
+            game.ShowClubs(cards);
+            Console.ReadLine();                  
             
 
         }

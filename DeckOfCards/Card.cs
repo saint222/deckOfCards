@@ -93,14 +93,16 @@ namespace DeckOfCards
             return suit;
 
         }
+       
+    
+
         public void ShowACard()
         {
             Console.OutputEncoding = System.Text.Encoding.UTF8;
             Card card = new Card();            
             Console.WriteLine("-----------");
             Console.WriteLine($"|{card.SuitsOn(Suit)}{card.RanksOn(Rank)}       |\n|         |\n|         |\n|         |\n|         |\n|       {card.SuitsOn(Suit)}{card.RanksOn(Rank)}|");
-            Console.WriteLine("-----------");
-            
+            Console.WriteLine("-----------");            
 
         }
 
