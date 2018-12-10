@@ -29,7 +29,7 @@ namespace DeckOfCards
         }
 
 
-        public List<Card> MixTheCards(List<Card> cards)
+        public List<Card> MixCards(List<Card> cards)
         {
 
             var shuffledCards = cards.OrderBy(n => Guid.NewGuid());
@@ -37,7 +37,7 @@ namespace DeckOfCards
             return shuffledCards.ToList();
         }
 
-        public void ShowFirstFiveCardsRfomTheDeck (List<Card> cards)
+        public void ShowFirstCards(List<Card> cards)
         {
 
             var firstFive = cards.Take(5).ToList();
@@ -60,7 +60,7 @@ namespace DeckOfCards
         }
 
 
-        public void ShowClubs(List<Card> cards)
+        public void CardsShowClubs(List<Card> cards)
         {
 
             var clubs = cards.Where(x => x.Suit == Suit.clubs).ToList();
