@@ -14,10 +14,10 @@ namespace DeckOfCards
 
             Game game = new Game();
             var cards = game.CreateCards();
-            game.MixTheCards(cards);
+            cards = game.MixTheCards(cards);
             game.ShowFirstFiveCardsRfomTheDeck(cards);
-            game.ShowMoreThanTenRankCards(cards);
-            game.ShowClubs(cards);
+            //game.ShowMoreThanTenRankCards(cards);
+            //game.ShowClubs(cards);
             Console.ReadLine();                
             
 

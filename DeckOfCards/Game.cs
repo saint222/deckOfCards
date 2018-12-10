@@ -34,11 +34,6 @@ namespace DeckOfCards
 
             var shuffledCards = cards.OrderBy(n => Guid.NewGuid());
 
-            foreach (var item in shuffledCards)
-            {
-                item.ShowACard();
-            }
-
             return shuffledCards.ToList();
         }
 
@@ -55,8 +50,8 @@ namespace DeckOfCards
 
         public void ShowMoreThanTenRankCards (List<Card> cards)
         {
-
-            var moreThanTen = cards.Where(x => x.Rank != Rank.two && x.Rank != Rank.three && x.Rank!=Rank.four && x.Rank!=Rank.five && x.Rank!=Rank.six && x.Rank!=Rank.seven && x.Rank != Rank.eight && x.Rank != Rank.nine && x.Rank != Rank.ten).ToList();
+            var moreThanTen = cards.Where(x => x.Rank > Rank.ten);
+            //var moreThanTen = cards.Where(x => x.Rank != Rank.two && x.Rank != Rank.three && x.Rank!=Rank.four && x.Rank!=Rank.five && x.Rank!=Rank.six && x.Rank!=Rank.seven && x.Rank != Rank.eight && x.Rank != Rank.nine && x.Rank != Rank.ten).ToList();
             foreach (var item in moreThanTen)
             {
                 item.ShowACard();
