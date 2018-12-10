@@ -34,12 +34,34 @@ namespace DeckOfCards
 
             var shuffledCards = cards.OrderBy(n => Guid.NewGuid());
 
-            foreach (var item in cards)
+            foreach (var item in shuffledCards)
             {
-                Console.WriteLine($"{item}");
+                item.ShowACard();
             }
 
             return shuffledCards.ToList();
+        }
+
+        public void ShowFirstFiveCardsRfomTheDeck (List<Card> cards)
+        {
+
+            var firstFive = cards.Take(5).ToList();
+            foreach (var item in firstFive)
+            {
+                item.ShowACard();
+            }
+
+        }
+
+        public void ShowMoreThanTenRankCards (List<Card> cards)
+        {
+
+            var moreThanTen = cards.Where(x => x.Rank != Rank.two && x.Rank != Rank.three && x.Rank!=Rank.four && x.Rank!=Rank.five && x.Rank!=Rank.six && x.Rank!=Rank.seven && x.Rank != Rank.eight && x.Rank != Rank.nine && x.Rank != Rank.ten).ToList();
+            foreach (var item in moreThanTen)
+            {
+                item.ShowACard();
+            }
+
         }
 
 
